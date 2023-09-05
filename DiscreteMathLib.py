@@ -37,7 +37,7 @@ print(setAB)
 #########################################################################
 
 
-# Subset(or equal)/check_if_is_contained(or equal) of two sets
+# Subset(or equal)/check_if_is_contained( or equal ) of two sets
 def Contained_or_IsSubset(setA, setB):
   setAB =  setA.issubset(setB)
   return setAB
