@@ -44,7 +44,7 @@ def Contained_or_IsSubset(setA, setB):
 
 '''
 setA = {1, 2, 69}
-setB = {1, 2, 6, 9, 8, 2, 69}
+setB = {1, 2, 6, 9, 8, 2, 69, 50135}
 
 setAB = Contained_or_IsSubset(setA, setB)
 print(setAB)
