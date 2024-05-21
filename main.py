@@ -33,7 +33,7 @@ print()
 print()
 print(f"     {bcolors.UNDERLINE}LOGICAL OPERATIONS{bcolors.ENDC}      ")
 print()
-print(f"{bcolors.WARNING} [ 01 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} x is true or false? {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 01 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} x is TRUE or FALSE? {bcolors.ENDC}")
 print(f"{bcolors.WARNING} [ 02 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} ¬x {bcolors.ENDC}")
 print(f"{bcolors.WARNING} [ 03 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p ∨ q {bcolors.ENDC}")
 print(f"{bcolors.WARNING} [ 04 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p ∧ q {bcolors.ENDC}")
@@ -85,12 +85,13 @@ print()
 
 option = int(input("Choose an option: "))
 
-if option == 1:
-    setA = {1, 2, 3, 6}
-    setB = {1, 2, 6, 9}
 
-    setAB = Union(setA, setB)
-    print(setAB)
+if option == 9 or option == "09": # Cardinality
+    #setA = {1, 2, 3, 6}
+    setA = int(input("What is the set? Ex.(1, 2, 3)"))
+
+    cardn = Cardinality(setA)
+    print(cardn)
     print()
     print("---------------------------------------------")
     print()    
