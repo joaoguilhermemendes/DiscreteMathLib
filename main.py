@@ -85,14 +85,28 @@ print()
 
 option = int(input("Choose an option (0 to exit): "))
 
-
-if option == 9 or option == "09": # Cardinality
+# Cardinality
+if option == 9 or option == "09": 
     setA = input("Enter a set (e.g. 1,2,3,4): ")
     user_setA = set(map(int, setA.split(',')))
 
     cardn = Cardinality(user_setA)
     print(f"{bcolors.OKCYAN}CARDINALITY: {bcolors.ENDC}", end=" ")
     print(cardn)
+    print()
+    print("---------------------------------------------")
+    print()    
+
+if option == 10:
+    setA = input("Enter a setA (e.g. 1,2,3,4): ")
+    user_setA = set(map(int, setA.split(',')))
+
+    setB = input("Enter a setA (e.g. 1,2,3,4): ")
+    user_setB = set(map(int, setB.split(',')))
+
+    union = Union(user_setA, user_setB)
+    print(f"{bcolors.OKCYAN}UNION: {bcolors.ENDC}", end=" ")
+    print(union)
     print()
     print("---------------------------------------------")
     print()    
