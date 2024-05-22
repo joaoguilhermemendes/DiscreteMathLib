@@ -6,7 +6,9 @@ from DiscreteMathLib import IsElement
 from DiscreteMathLib import Subtraction
 from DiscreteMathLib import Complement
 from DiscreteMathLib import CrtProd
-from DiscreteMathLib import partition
+from DiscreteMathLib import Partition
+from DiscreteMathLib import print_partitions
+from DiscreteMathLib import SimetricDifference
 from DiscreteMathLib import p
 from DiscreteMathLib import q
 from DiscreteMathLib import p_implication_q
@@ -84,32 +86,141 @@ print("---------------------------------------------")
 print()
 
 option = int(input("Choose an option (0 to exit): "))
+print()
 
 # Cardinality
 if option == 9 or option == "09": 
     setA = input("Enter a set (e.g. 1,2,3,4): ")
-    user_setA = set(map(int, setA.split(',')))
+    setA = set(map(int, setA.split(',')))
 
-    cardn = Cardinality(user_setA)
     print(f"{bcolors.OKCYAN}CARDINALITY: {bcolors.ENDC}", end=" ")
-    print(cardn)
+    print(Cardinality(setA))
     print()
     print("---------------------------------------------")
     print()    
 
+# Union
 if option == 10:
     setA = input("Enter a setA (e.g. 1,2,3,4): ")
-    user_setA = set(map(int, setA.split(',')))
+    setA = set(map(int, setA.split(',')))
 
     setB = input("Enter a setA (e.g. 1,2,3,4): ")
-    user_setB = set(map(int, setB.split(',')))
+    setB = set(map(int, setB.split(',')))
 
-    union = Union(user_setA, user_setB)
     print(f"{bcolors.OKCYAN}UNION: {bcolors.ENDC}", end=" ")
-    print(union)
+    print(Union(setA, setB))
+    print()
+    print("---------------------------------------------")
+    print()
+
+# Intersection
+if option == 11:
+    setA = input("Enter a setA (e.g. 1,2,3,4): ")
+    setA = set(map(int, setA.split(',')))
+
+    setB = input("Enter a setA (e.g. 1,2,3,4): ")
+    setB = set(map(int, setB.split(',')))
+
+    print(f"{bcolors.OKCYAN}INTERSECTION: {bcolors.ENDC}", end=" ")
+    print(Intersection(setA, setB))
     print()
     print("---------------------------------------------")
     print()    
+
+# Contained/IsSubset
+if option == 12:
+    setA = input("Enter a setA (e.g. 1,2,3,4): ")
+    setA = set(map(int, setA.split(',')))
+
+    setB = input("Enter a setA (e.g. 1,2,3,4): ")
+    setB = set(map(int, setB.split(',')))
+
+    print(f"{bcolors.OKCYAN}{setA} ⊆ {setB}? {bcolors.ENDC}", end=" ")
+    print(Contained_or_IsSubset(setA, setB))
+    print()
+    print("---------------------------------------------")
+    print()
+
+# IsElement?
+if option == 13:
+    x = int(input("Enter a element (e.g. 5): "))
+
+    setB = input("Enter a set (e.g. 1,2,3,4): ")
+    setB = set(map(int, setB.split(',')))
+
+    print(f"{bcolors.OKCYAN}{x} ∈ {setB}? {bcolors.ENDC}", end=" ")
+    print(IsElement(x, setB))
+    print()
+    print("---------------------------------------------")
+    print()
     
+# Subtraction?
+if option == 14:
+    setA = input("Enter a setA (e.g. 1,2,3,4): ")
+    setA = set(map(int, setA.split(',')))
+
+    setB = input("Enter a setA (e.g. 1,2,3,4): ")
+    setB = set(map(int, setB.split(',')))
+
+    print(f"{bcolors.OKCYAN}{setA} - {setB} = {bcolors.ENDC}", end=" ")
+    print(Subtraction(setA, setB))
+    print()
+    print("---------------------------------------------")
+    print()
+
+# Complement?
+if option == 15:
+    setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
+    setA = set(map(int, setA.split(',')))
+
+    setB = input("Enter a set (e.g. 1,2,3,4): ")
+    setB = set(map(int, setB.split(',')))
+
+    print(f"{bcolors.OKCYAN}{setA}' ou ({setA} - {setB}) = {bcolors.ENDC}", end=" ")
+    print(Complement(setA, setB))
+    print()
+    print("---------------------------------------------")
+    print()
+
+# CrtProd
+if option == 16:
+    setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
+    setA = set(map(int, setA.split(',')))
+
+    setB = input("Enter a set (e.g. 1,2,3,4): ")
+    setB = set(map(int, setB.split(',')))
+
+    print(f"{bcolors.OKCYAN}{setA} x {setB} = {bcolors.ENDC}", end=" ")
+    print(CrtProd(setA, setB))
+    print()
+    print("---------------------------------------------")
+    print()
+
+# Partition
+if option == 17:
+    setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
+    setA = set(map(int, setA.split(',')))
+
+    print(f"P({setA}) = ", end=" ")
+    partitions = Partition(list(setA))
+    print_partitions(partitions)
+    print()
+    print("---------------------------------------------")
+    print()
+
+# Simetric Difference
+if option == 18:
+    setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
+    setA = set(map(int, setA.split(',')))
+
+    setB = input("Enter a set (e.g. 1,2,3,4): ")
+    setB = set(map(int, setB.split(',')))
+
+    print(f"{bcolors.OKCYAN}{setA} △ {setB} = {bcolors.ENDC}", end=" ")
+    print(SimetricDifference(setA, setB))
+    print()
+    print("---------------------------------------------")
+    print()
+
 print()
 print()

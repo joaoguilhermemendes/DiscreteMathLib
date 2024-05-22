@@ -55,11 +55,8 @@ print(setAB)
 #########################################################################
 
 # Check if x is a element in set
-def IsElement(x, set):
-  if x in set:
-    return True
-  else:
-    return False
+def IsElement(x, user_setB):
+  return x in user_setB
     
 '''
 x = 1
@@ -89,15 +86,8 @@ print(setAB)
 
 # Complement of setA = A' or A^c
 def Complement(setUniversal, setA):
-  setComplement = []
-
-  for i in range(0, len(setUniversal)):
-    if setUniversal[i] not in setA:
-      setComplement.append(setUniversal[i])
-
-  setComplement = sorted(setComplement)
-  return setComplement
-
+  setComplement = setUniversal - setA
+  return sorted(setComplement)
 
 '''
 setUniversal = [1, 2, 3, 4, 5, 6]
@@ -128,19 +118,27 @@ print(setAB)
 
 
 # Partition of a set = P(a)
-def partition(setPartition):
-  if len(setPartition) == 1:
-    yield [setPartition]
-    return
+def Partition(setPartition):
+    setPartition = set(setPartition)  # Convert to set for set operations
+    if len(setPartition) == 1:
+        yield [setPartition]
+        return
 
-  first = setPartition[0]
-  for smaller in partition(setPartition[1:]):
-    # insert `first` in each of the subpartition's subsets
-    for n, subset in enumerate(smaller):
-      yield smaller[:n] + [[first] + subset] + smaller[n + 1:]
-    # put `first` in its own subset
-    yield [[first]] + smaller
+    first = next(iter(setPartition))
+    for smaller in Partition(setPartition - {first}):
+        # Convert each subset in smaller to sets for set operations
+        smaller_sets = [set(subset) for subset in smaller]
+        
+        # insert `first` in each of the subpartition's subsets
+        for n, subset in enumerate(smaller_sets):
+            yield smaller[:n] + [[first] + list(subset)] + smaller[n + 1:]
+        # put `first` in its own subset
+        yield [[first]] + smaller
 
+# Function to print partitions
+def print_partitions(partitions):
+    for partition in partitions:
+        print(partition)
 
 '''setPartition = [1, 2, 3, 4]
 print(setPartition)
@@ -149,6 +147,12 @@ print("")
 print("1 [NULL]")
 for n, p in enumerate(partition(setPartition), 2):
     print(n, sorted(p))'''
+
+#########################################################################
+
+# Simetric Difference A△B=(A∪B)−(A∩B)
+def SimetricDifference(setA, setB):
+   return Subtraction(Union(setA, setB), Intersection(setA, setB))
 
 #########################################################################
 
