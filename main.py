@@ -210,10 +210,10 @@ if option == 17:
 
 # Simetric Difference
 if option == 18:
-    setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
+    setA = input("Enter a setA (e.g. 1,2,3,4): ")
     setA = set(map(int, setA.split(',')))
 
-    setB = input("Enter a set (e.g. 1,2,3,4): ")
+    setB = input("Enter a setB (e.g. 1,2,3,4): ")
     setB = set(map(int, setB.split(',')))
 
     print(f"{bcolors.OKCYAN}{setA} △ {setB} = {bcolors.ENDC}", end=" ")

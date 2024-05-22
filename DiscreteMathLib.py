@@ -152,7 +152,8 @@ for n, p in enumerate(partition(setPartition), 2):
 
 # Simetric Difference A△B=(A∪B)−(A∩B)
 def SimetricDifference(setA, setB):
-   return Subtraction(Union(setA, setB), Intersection(setA, setB))
+  setAB = setA.symmetric_difference(setB)
+  return sorted(setAB)
 
 #########################################################################
 
