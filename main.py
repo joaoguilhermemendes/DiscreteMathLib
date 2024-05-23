@@ -30,9 +30,19 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+# Logo Display
+print(rf"""{bcolors.WARNING}
+  _____  _                   _       __  __       _   _     _      _ _     
+ |  __ \(_)                 | |     |  \/  |     | | | |   | |    (_) |    
+ | |  | |_ ___  ___ _ __ ___| |_ ___| \  / | __ _| |_| |__ | |     _| |__  
+ | |  | | / __|/ __| '__/ _ \ __/ _ \ |\/| |/ _` | __| '_ \| |    | | '_ \ 
+ | |__| | \__ \ (__| | |  __/ ||  __/ |  | | (_| | |_| | | | |____| | |_) |
+ |_____/|_|___/\___|_|  \___|\__\___|_|  |_|\__,_|\__|_| |_|______|_|_.__/ {bcolors.ENDC}
+      
+                                                       {bcolors.OKCYAN}by @cr0n1x_Scr1pts{bcolors.ENDC}                        
+                """)
+
 # Menu
-print()
-print()
 print(f"     {bcolors.UNDERLINE}LOGICAL OPERATIONS{bcolors.ENDC}      ")
 print()
 print(f"{bcolors.WARNING} [ 01 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} x is TRUE or FALSE? {bcolors.ENDC}")
