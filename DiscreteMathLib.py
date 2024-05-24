@@ -1,3 +1,15 @@
+# Colors
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 ########################################################################
 
 def Cardinality(setA):
@@ -225,12 +237,14 @@ print(Exist_x(setA))'''
 #########################################################################
 
 def Transpose(mat, N):
+  label = "TRANSPOSE MATRIX"
   tr = [ [0 for j in range(len(mat[0])) ] for i in range(len(mat)) ]  
   for i in range(N):
     for j in range(N):
       tr[i][j] = mat[j][i]
-      print(tr[i][j],end='  ')
+      print(f"{bcolors.OKCYAN}{tr[i][j]}{bcolors.ENDC}",end='  ')
     print()
+  return label
 
 '''
 mat = [ [ 1, 2, 3 ], 

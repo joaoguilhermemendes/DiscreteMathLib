@@ -234,5 +234,40 @@ while option != 0:
         print("---------------------------------------------")
         print()
 
+
+    # Matrix is symmetric
+    if option == 22:
+        size = int(input("Enter the matrix size: "))
+
+        cont = 0
+        mat = []
+        while cont < size:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            mat.append(row)
+            cont += 1
+
+        print(f"{bcolors.OKCYAN}{mat}{bcolors.ENDC} is symmetric? = {isSymmetric(mat, size)}")
+        print()
+        print("---------------------------------------------")
+        print()
+
+    # Transpose Matrix
+    if option == 23:
+        size = int(input("Enter the matrix size: "))
+
+        cont = 0
+        mat = []
+        while cont < size:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            mat.append(row)
+            cont += 1
+
+        print(f"{bcolors.OKCYAN}{Transpose(mat, size)}{bcolors.ENDC}")
+        print()
+        print("---------------------------------------------")
+        print()
+
 print()
 print()
