@@ -7,7 +7,7 @@ This repository contains a collection of Python functions designed to perform va
  - Symmetric Difference: Calculates the symmetric difference between two sets.
  - Some more...
 
-
+![image](https://github.com/joaoguilhermemendes/DiscreteMathLib_UFF/assets/68798128/90a2d3db-ca01-419b-a4ce-23db7fd665ea)
 
 
 
