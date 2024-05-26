@@ -17,6 +17,7 @@ from DiscreteMathLib import For_all_x
 from DiscreteMathLib import Exist_x
 from DiscreteMathLib import Transpose
 from DiscreteMathLib import isSymmetric
+from DiscreteMathLib import Summation
 
 # Colors
 class bcolors:
@@ -39,8 +40,8 @@ print(rf"""{bcolors.WARNING}
  | |__| | \__ \ (__| | |  __/ ||  __/ |  | | (_| | |_| | | | |____| | |_) |
  |_____/|_|___/\___|_|  \___|\__\___|_|  |_|\__,_|\__|_| |_|______|_|_.__/ {bcolors.ENDC}
       
-                                                       {bcolors.OKCYAN}by @cr0n1x_Scr1pts{bcolors.ENDC}                        
-                """)
+                                                    {bcolors.OKCYAN}by @joaoguilhermemendes{bcolors.ENDC}                        
+        """)
 
 # Menu
 print(f"     {bcolors.UNDERLINE}LOGICAL OPERATIONS{bcolors.ENDC}      ")
@@ -268,6 +269,7 @@ while option != 0:
         print()
         print("---------------------------------------------")
         print()
+
 
 print()
 print()

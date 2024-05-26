@@ -1,3 +1,5 @@
+from sympy import symbols, simplify, summation, sympify
+
 # Colors
 class bcolors:
     HEADER = '\033[95m'
@@ -275,3 +277,7 @@ else:
 '''
 
 #########################################################################
+
+
+
+

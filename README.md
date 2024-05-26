@@ -14,3 +14,4 @@ This repository contains a collection of Python functions designed to perform va
 
 ## To Do:
  - [ ] Step-by-Step Demonstrations
+ - [ ] Improve Summation equation possibilities
