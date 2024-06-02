@@ -11,7 +11,10 @@ from DiscreteMathLib import print_partitions
 from DiscreteMathLib import SimetricDifference
 from DiscreteMathLib import p
 from DiscreteMathLib import q
-from DiscreteMathLib import p_implication_q
+from DiscreteMathLib import not_p
+from DiscreteMathLib import p_OR_q
+from DiscreteMathLib import p_AND_q
+from DiscreteMathLib import p_SO_q
 from DiscreteMathLib import p_biimplication_q
 from DiscreteMathLib import For_all_x
 from DiscreteMathLib import Exist_x
@@ -101,6 +104,56 @@ option=1
 while option != 0:
     option = int(input("Choose an option (0 to exit): "))
     print()
+
+    # ¬x / Not p
+    if option == 2:
+        p = str(input("Enter the (p) value (T for True / F for false): "))
+        print()
+        print(f"{bcolors.OKCYAN}{not_p(p)}{bcolors.ENDC}", end=" ")
+        print()
+        print("---------------------------------------------")
+        print() 
+    
+    # OR
+    if option == 3:
+        p = str(input("Enter the (p) value (T for True / F for false): "))
+        q = str(input("Enter the (q) value (T for True / F for false): "))
+        print()
+        print(f"{bcolors.OKCYAN}{p_OR_q(p, q)}{bcolors.ENDC}", end=" ")
+        print()
+        print("---------------------------------------------")
+        print()    
+
+    # AND
+    if option == 4:
+        p = str(input("Enter the (p) value (T for True / F for false): "))
+        q = str(input("Enter the (q) value (T for True / F for false): "))
+        print()
+        print(f"{bcolors.OKCYAN}{p_AND_q(p, q)}{bcolors.ENDC}", end=" ")
+        print()
+        print("---------------------------------------------")
+        print()  
+
+    # Implication
+    if option == 5 or option == "5":
+        p = str(input("Enter the (p) value (T for True / F forfalse): "))
+        q = str(input("Enter the (q) value (T for True / F for false): "))
+        print()
+        print(f"{bcolors.OKCYAN}{p_SO_q(p, q)}{bcolors.ENDC}", end=" ")
+        print()
+        print("---------------------------------------------")
+        print() 
+
+    # BI-Implication
+    if option == 6 or option == "5":
+        p = str(input("Enter the (p) value (T for True / F forfalse): "))
+        q = str(input("Enter the (q) value (T for True / F for false): "))
+        print()
+        print(f"{bcolors.OKCYAN}{p_biimplication_q(p, q)}{bcolors.ENDC}", end=" ")
+        print()
+        print("---------------------------------------------")
+        print() 
+
 
     # Cardinality
     if option == 9 or option == "09": 

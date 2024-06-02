@@ -32,6 +32,7 @@ Final index: 5 <br>
 <br>
 
 ## To Do:
+ - [ ] Re-Order index (Remove 01 | Maybe 07, 08 (need to think about))
  - [ ] Create a Label for the prints (e.g. [ UNION ]) / some different color
  - [ ] Step-by-Step Demonstrations
  - [x] Improve Summation equation possibilities

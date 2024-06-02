@@ -12,10 +12,51 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+
+def not_p(p):
+  if p == "F" or "f":
+    return "T"
+  else:
+     return "F"
+  
+########################################################################
+
+def p_OR_q(p, q):
+  print("p | q | p v q")
+  return (f"{p} | {q} |   {p or q}")
+
+########################################################################
+
+
+def p_AND_q(p, q):
+  print("p | q | p ^ q")
+  return (f"{p} | {q} |   {p and q}")
+
+########################################################################
+
+
+def p_SO_q(p, q):
+  print("p | q | p -> q")
+  if (p == "T" or p == "t") and (q == "F" or q == 'f'):
+    return (f"{p} | {q} |   F")
+  else:
+     return (f"{p} | {q} |   T")
+
+
+########################################################################
+
+
+def p_biimplication_q(p, q):
+  print("p | q | p <-> q")
+  if p == q :
+    return (f"{p} | {q} |   T")
+  else:
+     return (f"{p} | {q} |   F")
+  
 ########################################################################
 
 def Cardinality(setA):
-      return len(setA)
+  return len(setA)
 
 ########################################################################
 
@@ -186,18 +227,6 @@ def q(q1):
       return True
   elif res == 'F' or res ==  'f':
       return False
-
-def p_implication_q(p,q):
-  if p and not q:
-    return False
-  else:
-    return True
-
-def p_biimplication_q(p,q):
-  if p == q:
-    return True
-  else:
-    return False
     
 
 #########################################################################
