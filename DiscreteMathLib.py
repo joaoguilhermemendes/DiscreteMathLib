@@ -267,6 +267,48 @@ print(Exist_x(setA))'''
 
 #########################################################################
 
+def Sum_of_Matrix(matA, matB):
+    if len(matA) != len(matB) or len(matA[0]) != len(matB[0]):
+        return "Matrices must have the same dimensions for addition."
+    
+    result = [[0 for _ in range(len(matA[0]))] for _ in range(len(matA))]
+    
+    for i in range(len(matA)):
+        for j in range(len(matA[0])):
+            result[i][j] = matA[i][j] + matB[i][j]
+    
+    return result
+
+#########################################################################
+
+def Sub_of_Matrix(matA, matB):
+    if len(matA) != len(matB) or len(matA[0]) != len(matB[0]):
+        return "Matrices must have the same dimensions for addition."
+    
+    result = [[0 for _ in range(len(matA[0]))] for _ in range(len(matA))]
+    
+    for i in range(len(matA)):
+        for j in range(len(matA[0])):
+            result[i][j] = matA[i][j] - matB[i][j]
+    
+    return result
+
+#########################################################################
+
+def Mult_of_Matrix(matA, matB):
+    if len(matA) != len(matB) or len(matA[0]) != len(matB[0]):
+        return "Matrices must have the same dimensions for addition."
+    
+    result = [[0 for _ in range(len(matA[0]))] for _ in range(len(matA))]
+    
+    for i in range(len(matA)):
+        for j in range(len(matA[0])):
+            result[i][j] = matA[i][j] * matB[i][j]
+    
+    return result
+
+#########################################################################
+
 def Transpose(mat, N):
   label = "TRANSPOSE MATRIX"
   tr = [ [0 for j in range(len(mat[0])) ] for i in range(len(mat)) ]  

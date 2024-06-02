@@ -16,10 +16,11 @@ from DiscreteMathLib import p_OR_q
 from DiscreteMathLib import p_AND_q
 from DiscreteMathLib import p_SO_q
 from DiscreteMathLib import p_biimplication_q
-from DiscreteMathLib import For_all_x
-from DiscreteMathLib import Exist_x
 from DiscreteMathLib import Transpose
 from DiscreteMathLib import isSymmetric
+from DiscreteMathLib import Sum_of_Matrix
+from DiscreteMathLib import Sub_of_Matrix
+from DiscreteMathLib import Mult_of_Matrix
 from DiscreteMathLib import Summation
 from DiscreteMathLib import ProductionNotation
 from DiscreteMathLib import BasicTrueTable
@@ -51,52 +52,46 @@ print(rf"""{bcolors.WARNING}
 # Menu
 print(f"     {bcolors.UNDERLINE}LOGICAL OPERATIONS{bcolors.ENDC}      ")
 print()
-print(f"{bcolors.WARNING} [ 01 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} x is TRUE or FALSE? {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 02 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} ¬x {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 03 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p ∨ q {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 04 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p ∧ q {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 05 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p -> q (implication) {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 06 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p <-> q (biimplication) {bcolors.ENDC}")
-print()
-print()
-print(f"     {bcolors.UNDERLINE}QUANTIFIER{bcolors.ENDC}      ")
-print()
-print(f"{bcolors.WARNING} [ 07 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Existencial Quantifier {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 08 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Universal Quantifier {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 01 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} ¬x {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 02 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p ∨ q {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 03 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p ∧ q {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 04 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p -> q (implication) {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 05 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} p <-> q (biimplication) {bcolors.ENDC}")
 print()
 print()
 print(f"     {bcolors.UNDERLINE}OPERATION WITH SETS{bcolors.ENDC}      ")
 print()
-print(f"{bcolors.WARNING} [ 09 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Cardinality {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 10 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Union {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 11 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Intersection {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 12 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Contained/IsSubset? {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 13 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} IsElement? {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 14 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Subtraction {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 15 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Complement {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 16 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Cartesian product {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 17 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Partition {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 18 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Simetric Diference {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 06 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Cardinality {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 07 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Union {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 08 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Intersection {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 09 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Contained/IsSubset? {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 10 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} IsElement? {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 11 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Subtraction {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 12 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Complement {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 13 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Cartesian product {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 14 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Partition {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 15 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Simetric Diference {bcolors.ENDC}")
 print()
 print()
 print(f"     {bcolors.UNDERLINE}MATRIX OPERATIONS{bcolors.ENDC}      ")
 print()
-print(f"{bcolors.WARNING} [ 19 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Sum of Matrix {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 20 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Subtration of Matrix {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 21 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Multiplication of Matrix {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 22 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Transpose Matrix {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 23 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Matrix is Simetric {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 16 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Sum of Matrix {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 17 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Subtration of Matrix {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 18 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Multiplication of Matrix {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 19 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Transpose Matrix {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 20 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Matrix is Simetric {bcolors.ENDC}")
 print()
 print()
 print(f"     {bcolors.UNDERLINE}SUMMATION AND PRODUCTION NOTATION{bcolors.ENDC}      ")
 print()
-print(f"{bcolors.WARNING} [ 24 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Summation {bcolors.ENDC}")
-print(f"{bcolors.WARNING} [ 25 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Production Notation {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 21 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Summation {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 22 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} Production Notation {bcolors.ENDC}")
 print()
 print()
 print(f"     {bcolors.UNDERLINE}TRUE TABLES{bcolors.ENDC}      ")
 print()
-print(f"{bcolors.WARNING} [ 26 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} (Basics) |p |q |¬p |¬q |pvq |p∧q |p->q |p<->q| {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 23 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} (Basics) |p |q |¬p |¬q |pvq |p∧q |p->q |p<->q| {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 24 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} (Create) e.g. (p ^ q -> -r) {bcolors.ENDC}")
 print()
 print("---------------------------------------------")
 print()
@@ -107,7 +102,7 @@ while option != 0:
     print()
 
     # ¬x / Not p
-    if option == 2:
+    if option == 1:
         p = str(input("Enter the (p) value (T for True / F for false): "))
         print()
         print(f"{bcolors.OKCYAN}{not_p(p)}{bcolors.ENDC}", end=" ")
@@ -116,7 +111,7 @@ while option != 0:
         print() 
     
     # OR
-    if option == 3:
+    if option == 2:
         p = str(input("Enter the (p) value (T for True / F for false): "))
         q = str(input("Enter the (q) value (T for True / F for false): "))
         print()
@@ -126,7 +121,7 @@ while option != 0:
         print()    
 
     # AND
-    if option == 4:
+    if option == 3:
         p = str(input("Enter the (p) value (T for True / F for false): "))
         q = str(input("Enter the (q) value (T for True / F for false): "))
         print()
@@ -136,7 +131,7 @@ while option != 0:
         print()  
 
     # Implication
-    if option == 5 or option == "5":
+    if option == 4 or option == "5":
         p = str(input("Enter the (p) value (T for True / F forfalse): "))
         q = str(input("Enter the (q) value (T for True / F for false): "))
         print()
@@ -146,7 +141,7 @@ while option != 0:
         print() 
 
     # BI-Implication
-    if option == 6 or option == "5":
+    if option == 5 or option == "5":
         p = str(input("Enter the (p) value (T for True / F forfalse): "))
         q = str(input("Enter the (q) value (T for True / F for false): "))
         print()
@@ -157,7 +152,7 @@ while option != 0:
 
 
     # Cardinality
-    if option == 9 or option == "09": 
+    if option == 6 or option == "09": 
         setA = input("Enter a set (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -168,7 +163,7 @@ while option != 0:
         print()    
 
     # Union
-    if option == 10:
+    if option == 7:
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -182,7 +177,7 @@ while option != 0:
         print()
 
     # Intersection
-    if option == 11:
+    if option == 8:
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -196,7 +191,7 @@ while option != 0:
         print()    
 
     # Contained/IsSubset
-    if option == 12:
+    if option == 9:
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -210,7 +205,7 @@ while option != 0:
         print()
 
     # IsElement?
-    if option == 13:
+    if option == 10:
         x = int(input("Enter a element (e.g. 5): "))
 
         setB = input("Enter a set (e.g. 1,2,3,4): ")
@@ -223,7 +218,7 @@ while option != 0:
         print()
         
     # Subtraction?
-    if option == 14:
+    if option == 11:
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -237,7 +232,7 @@ while option != 0:
         print()
 
     # Complement?
-    if option == 15:
+    if option == 12:
         setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -251,7 +246,7 @@ while option != 0:
         print()
 
     # CrtProd
-    if option == 16:
+    if option == 13:
         setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -265,7 +260,7 @@ while option != 0:
         print()
 
     # Partition
-    if option == 17:
+    if option == 14:
         setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -277,7 +272,7 @@ while option != 0:
         print()
 
     # Simetric Difference
-    if option == 18:
+    if option == 15:
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -289,10 +284,123 @@ while option != 0:
         print()
         print("---------------------------------------------")
         print()
+    
+    # Sum of Matrix
+    if option == 16:
+        sizeA = int(input("Enter the matrix A size: "))
+
+        cont = 0
+        matA = []
+        while cont < sizeA:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            matA.append(row)
+            cont += 1
+        
+        print()
+
+        sizeB = int(input("Enter the matrix B size: "))
+
+        cont = 0
+        matB = []
+        while cont < sizeB:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            matB.append(row)
+            cont += 1
+        
+        print()
+
+        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Sum_of_Matrix(matA, matB)}")
+        print()
+        print("---------------------------------------------")
+        print()
+
+
+    # Sub of Matrix
+    if option == 17:
+        sizeA = int(input("Enter the matrix A size: "))
+
+        cont = 0
+        matA = []
+        while cont < sizeA:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            matA.append(row)
+            cont += 1
+        
+        print()
+
+        sizeB = int(input("Enter the matrix B size: "))
+
+        cont = 0
+        matB = []
+        while cont < sizeB:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            matB.append(row)
+            cont += 1
+
+        print()
+
+        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Sub_of_Matrix(matA, matB)}")
+        print()
+        print("---------------------------------------------")
+        print()
+
+
+    # Mult of Matrix
+    if option == 18:
+        sizeA = int(input("Enter the matrix A size: "))
+
+        cont = 0
+        matA = []
+        while cont < sizeA:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            matA.append(row)
+            cont += 1
+        
+        print()
+
+        sizeB = int(input("Enter the matrix B size: "))
+
+        cont = 0
+        matB = []
+        while cont < sizeB:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            matB.append(row)
+            cont += 1
+
+        print()
+
+        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Mult_of_Matrix(matA, matB)}")
+        print()
+        print("---------------------------------------------")
+        print()
+
+
+    # Transpose Matrix
+    if option == 19:
+        size = int(input("Enter the matrix size: "))
+
+        cont = 0
+        mat = []
+        while cont < size:
+            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
+            row = list(map(int, row.split(',')))
+            mat.append(row)
+            cont += 1
+
+        print(f"{bcolors.OKCYAN}{Transpose(mat, size)}{bcolors.ENDC}")
+        print()
+        print("---------------------------------------------")
+        print()
 
 
     # Matrix is symmetric
-    if option == 22:
+    if option == 20:
         size = int(input("Enter the matrix size: "))
 
         cont = 0
@@ -309,7 +417,7 @@ while option != 0:
         print()
 
     # Transpose Matrix
-    if option == 23:
+    if option == 21:
         size = int(input("Enter the matrix size: "))
 
         cont = 0
@@ -326,7 +434,7 @@ while option != 0:
         print()
 
     # Summation
-    if option == 24:
+    if option == 22:
         exp = str(input("Enter the expression - e.g. (4*x ** 2) - 1 ---- "))
         i = int(input("Enter the initial index: "))
         n = int(input("Enter the final index: "))
@@ -340,7 +448,7 @@ while option != 0:
         print()
 
     # Production Notation
-    if option == 25:
+    if option == 23:
         exp = str(input("Enter the expression - e.g. (4*x ** 2) - 1 ---- "))
         i = int(input("Enter the initial index: "))
         n = int(input("Enter the final index: "))
@@ -353,7 +461,7 @@ while option != 0:
         print()
 
     # Basic True Table
-    if option == 26:
+    if option == 24:
         p = str(input("Enter the (p) value (T for True / F for false): "))
         q = str(input("Enter the (q) value (T for True / F for false): "))
         print()
