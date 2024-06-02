@@ -18,6 +18,7 @@ from DiscreteMathLib import Exist_x
 from DiscreteMathLib import Transpose
 from DiscreteMathLib import isSymmetric
 from DiscreteMathLib import Summation
+from DiscreteMathLib import ProductionNotation
 
 # Colors
 class bcolors:
@@ -283,6 +284,20 @@ while option != 0:
         print()
         print("---------------------------------------------")
         print()
+
+    # Production Notation
+    if option == 25:
+        exp = str(input("Enter the expression - e.g. (4*x ** 2) - 1 ---- "))
+        i = int(input("Enter the initial index: "))
+        n = int(input("Enter the final index: "))
+
+        print(f"{bcolors.OKCYAN}Production Notation: {bcolors.ENDC}")
+        print()
+        print(ProductionNotation(exp, i, n))
+        print()
+        print("---------------------------------------------")
+        print()
+
 
 
 print()

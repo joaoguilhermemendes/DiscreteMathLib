@@ -299,3 +299,21 @@ n = 2
 print(Summation(exp, i, n))
 '''
 
+##########################################################################
+
+def ProductionNotation(exp, i, n):
+    j = i
+    parts = []
+    while j <= n:
+        x = j
+        # Aqui, vamos substituir o valor de x na expressão antes de avaliá-la
+        res = eval(exp)
+        parts.append(res)
+        j = j + 1
+
+    # Depois de obter os resultados das expressões, calculamos o produto deles
+    prod = parts[0]
+    for aux in range(0, len(parts) - 1):
+        if (aux + 1) <= len(parts) - 1:
+            prod = prod * parts[aux + 1]
+    return prod
