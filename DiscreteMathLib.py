@@ -346,3 +346,14 @@ def ProductionNotation(exp, i, n):
         if (aux + 1) <= len(parts) - 1:
             prod = prod * parts[aux + 1]
     return prod
+
+##########################################################################
+
+def BasicTrueTable(p,q):
+  print("p | q | ¬p | ¬q | pvq |p∧q |p->q |p<->q|")
+  if (p == "T" or p == "t") and (q == "F" or q == 'f'):
+    impl = "F"
+  else:
+    impl = "T"
+     
+  return (f"{p} | {q} |  {not p} |  {not q} |  {p or q}  |  {p and q} |  {impl}  |  {p == q}").replace("True", "T").replace("False", "F")

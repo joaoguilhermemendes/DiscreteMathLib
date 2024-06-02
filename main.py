@@ -22,6 +22,7 @@ from DiscreteMathLib import Transpose
 from DiscreteMathLib import isSymmetric
 from DiscreteMathLib import Summation
 from DiscreteMathLib import ProductionNotation
+from DiscreteMathLib import BasicTrueTable
 
 # Colors
 class bcolors:
@@ -95,7 +96,7 @@ print()
 print()
 print(f"     {bcolors.UNDERLINE}TRUE TABLES{bcolors.ENDC}      ")
 print()
-print(f"{bcolors.WARNING} [ 25 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} (Basics) |p |q |¬p |¬q |pvq |p∧q |p->q |p<->q| {bcolors.ENDC}")
+print(f"{bcolors.WARNING} [ 26 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} (Basics) |p |q |¬p |¬q |pvq |p∧q |p->q |p<->q| {bcolors.ENDC}")
 print()
 print("---------------------------------------------")
 print()
@@ -350,6 +351,16 @@ while option != 0:
         print()
         print("---------------------------------------------")
         print()
+
+    # Basic True Table
+    if option == 26:
+        p = str(input("Enter the (p) value (T for True / F for false): "))
+        q = str(input("Enter the (q) value (T for True / F for false): "))
+        print()
+        print(f"{bcolors.OKCYAN}{BasicTrueTable(p,q)}{bcolors.ENDC}", end=" ")
+        print()
+        print("---------------------------------------------")
+        print()    
 
 
 
