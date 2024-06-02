@@ -279,5 +279,23 @@ else:
 #########################################################################
 
 
+def Summation(exp,i,n):
+    j=i
+    parts=[]
+    while j<=n:
+        x=j
+        res = eval(exp)
+        parts.append(res)
+        j=j+1
+    print(parts)
+    print("Σ = ", end="")
+    return sum(parts)
 
+'''
+exp = (4*x ** 2)/2*x
+i = 0
+n = 2
+
+print(Summation(exp, i, n))
+'''
 

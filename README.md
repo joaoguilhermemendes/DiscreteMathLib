@@ -9,6 +9,29 @@ This repository contains a collection of Python functions designed to perform va
 
 ![image](https://github.com/joaoguilhermemendes/DiscreteMathLib_UFF/assets/68798128/a4fd6ee6-c3b2-405a-89c7-e741368fd11c)
 
+## Samples Demonstration
+#### INPUT
+```python
+[ SUMMATION ]
+
+Expression: (4*x ** 2)/2*x <br>
+Initial index: 0 <br>
+Final index: 5 <br>
+```
+
+#### OUTPUT
+```python
+[ SUMMATION ]
+
+Σ (i=0 to 2) = (4*x ** 2)/2*x
+
+Σ = [0.0, 2.0, 16.0]
+Σ = 18.0
+```
+
+<br>
+
 ## To Do:
+ - [ ] Create a Label for the prints (e.g. [ UNION ]) / some different color
  - [ ] Step-by-Step Demonstrations
- - [ ] Improve Summation equation possibilities
+ - [x] Improve Summation equation possibilities

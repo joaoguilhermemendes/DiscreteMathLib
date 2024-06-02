@@ -17,6 +17,7 @@ from DiscreteMathLib import For_all_x
 from DiscreteMathLib import Exist_x
 from DiscreteMathLib import Transpose
 from DiscreteMathLib import isSymmetric
+from DiscreteMathLib import Summation
 
 # Colors
 class bcolors:
@@ -265,6 +266,20 @@ while option != 0:
             cont += 1
 
         print(f"{bcolors.OKCYAN}{Transpose(mat, size)}{bcolors.ENDC}")
+        print()
+        print("---------------------------------------------")
+        print()
+
+    # Summation
+    if option == 24:
+        exp = str(input("Enter the expression - e.g. (4*x ** 2) - 1 ---- "))
+        i = int(input("Enter the initial index: "))
+        n = int(input("Enter the final index: "))
+
+        print(f"{bcolors.OKCYAN}Σ (i={i} to {n}) = {exp}{bcolors.ENDC}")
+        print()
+        print("Σ = ", end="")
+        print(Summation(exp, i, n))
         print()
         print("---------------------------------------------")
         print()
