@@ -32,7 +32,7 @@ Final index: 5 <br>
 <br>
 
 ## To Do:
- - [ ] Code the (Basic) TRUE TABLE function
+ - [x] Code the (Basic) TRUE TABLE function
  - [ ] Create a generalized function for the user creates a logic expression (e.g. https://web.stanford.edu/class/cs103/tools/truth-table-tool/)
  - [ ] Re-Order index (Remove 01 | Maybe 07, 08 (need to think about))
  - [ ] Create a Label for the prints (e.g. [ UNION ]) / some different color
