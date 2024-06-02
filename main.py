@@ -17,7 +17,6 @@ from DiscreteMathLib import For_all_x
 from DiscreteMathLib import Exist_x
 from DiscreteMathLib import Transpose
 from DiscreteMathLib import isSymmetric
-from DiscreteMathLib import Summation
 
 # Colors
 class bcolors:
