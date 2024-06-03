@@ -35,6 +35,6 @@ Final index: 5 <br>
  - [x] Code the (Basic) TRUE TABLE function
  - [ ] Create a generalized function for the user creates a logic expression (e.g. https://web.stanford.edu/class/cs103/tools/truth-table-tool/)
  - [x] Re-Order index (Remove 01 | Maybe 07, 08 (need to think about))
- - [ ] Create a Label for the prints (e.g. [ UNION ]) / some different color
+ - [x] Create a Label for the prints (e.g. [ UNION ]) / some different color
  - [ ] Step-by-Step Demonstrations
  - [x] Improve Summation equation possibilities

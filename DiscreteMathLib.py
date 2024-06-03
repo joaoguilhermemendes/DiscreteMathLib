@@ -69,6 +69,7 @@ def p_SO_q(p, q):
   print()
 
   print(f"{bcolors.OKCYAN}p | q | p → q{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
   if (p == "T" or p == "t") and (q == "F" or q == 'f'):
     return (f"{p} | {q} |   F")
   else:
@@ -88,6 +89,7 @@ def p_biimplication_q(p, q):
   print()
 
   print(f"{bcolors.OKCYAN}p | q | p ↔ q{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
   if p == q :
     return (f"{p} | {q} |   T")
   else:

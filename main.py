@@ -175,6 +175,8 @@ while option != 0:
 
     # Union
     if option == 7:
+        print(f"{bcolors.OKGREEN}----> [ A ∪ B ] UNION{bcolors.ENDC}")
+        print()
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -188,6 +190,8 @@ while option != 0:
 
     # Intersection
     if option == 8:
+        print(f"{bcolors.OKGREEN}----> [ A ∩ B ] INTERSECTION{bcolors.ENDC}")
+        print()
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -201,6 +205,8 @@ while option != 0:
 
     # Contained/IsSubset
     if option == 9:
+        print(f"{bcolors.OKGREEN}----> [ A ⊆ B ] CONTAINED/IS SUBSET{bcolors.ENDC}")
+        print()
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -214,18 +220,22 @@ while option != 0:
 
     # IsElement?
     if option == 10:
+        print(f"{bcolors.OKGREEN}----> [ x ∈ A ] IS ELEMENT?{bcolors.ENDC}")
+        print()
         x = int(input("Enter a element (e.g. 5): "))
 
-        setB = input("Enter a set (e.g. 1,2,3,4): ")
-        setB = set(map(int, setB.split(',')))
+        setA = input("Enter a setA (e.g. 1,2,3,4): ")
+        setA = set(map(int, setA.split(',')))
 
-        print(f"{bcolors.OKCYAN}{x} ∈ {setB}? {bcolors.ENDC}", end=" ")
-        print(IsElement(x, setB))
+        print(f"{bcolors.OKCYAN}{x} ∈ {setA}? {bcolors.ENDC}", end=" ")
+        print(IsElement(x, setA))
         print()
         print("---------------------------------------------")
         
     # Subtraction?
     if option == 11:
+        print(f"{bcolors.OKGREEN}----> [ A - B ] SUBTRATION{bcolors.ENDC}")
+        print()
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -239,6 +249,8 @@ while option != 0:
 
     # Complement?
     if option == 12:
+        print(f"{bcolors.OKGREEN}----> [ Aˉ ] COMPLEMENT{bcolors.ENDC}")
+        print()
         setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -252,6 +264,8 @@ while option != 0:
 
     # CrtProd
     if option == 13:
+        print(f"{bcolors.OKGREEN}----> [ A × B ] CARTESIAN PRODUCT{bcolors.ENDC}")
+        print()
         setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -265,6 +279,8 @@ while option != 0:
 
     # Partition
     if option == 14:
+        print(f"{bcolors.OKGREEN}----> [ P=(A1​,A2​,…,An​) ] PARTITION{bcolors.ENDC}")
+        print()
         setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -274,8 +290,10 @@ while option != 0:
         print()
         print("---------------------------------------------")
 
-    # Simetric Difference
+    # Symmetric Difference
     if option == 15:
+        print(f"{bcolors.OKGREEN}----> [ A△B ] SYMMETRIC DIFFERENCE {bcolors.ENDC}")
+        print()
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
 
@@ -289,6 +307,8 @@ while option != 0:
     
     # Sum of Matrix
     if option == 16:
+        print(f"{bcolors.OKGREEN}----> [ A + B ] SUM OF MATRIX {bcolors.ENDC}")
+        print()
         sizeA = int(input("Enter the matrix A size: "))
 
         cont = 0
@@ -320,6 +340,8 @@ while option != 0:
 
     # Sub of Matrix
     if option == 17:
+        print(f"{bcolors.OKGREEN}----> [ A - B ] SUB OF MATRIX {bcolors.ENDC}")
+        print()
         sizeA = int(input("Enter the matrix A size: "))
 
         cont = 0
@@ -351,6 +373,8 @@ while option != 0:
 
     # Mult of Matrix
     if option == 18:
+        print(f"{bcolors.OKGREEN}----> [ A * B ] MULT OF MATRIX {bcolors.ENDC}")
+        print()
         sizeA = int(input("Enter the matrix A size: "))
 
         cont = 0
@@ -381,6 +405,8 @@ while option != 0:
 
     # Transpose Matrix
     if option == 19:
+        print(f"{bcolors.OKGREEN}----> [ A^T ] TRANSPOSE MATRIX {bcolors.ENDC}")
+        print()
         size = int(input("Enter the matrix size: "))
 
         cont = 0
@@ -397,6 +423,8 @@ while option != 0:
 
     # Matrix is symmetric
     if option == 20:
+        print(f"{bcolors.OKGREEN}----> [ A△B ?] MATRIX IS SYMMETRIC? {bcolors.ENDC}")
+        print()
         size = int(input("Enter the matrix size: "))
 
         cont = 0
@@ -411,24 +439,10 @@ while option != 0:
         print()
         print("---------------------------------------------")
 
-    # Transpose Matrix
-    if option == 21:
-        size = int(input("Enter the matrix size: "))
-
-        cont = 0
-        mat = []
-        while cont < size:
-            row = input(f"Enter row {cont + 1} of the matrix (e.g. 1,2,3,4): ")
-            row = list(map(int, row.split(',')))
-            mat.append(row)
-            cont += 1
-
-        print(f"{bcolors.OKCYAN}{Transpose(mat, size)}{bcolors.ENDC}")
-        print()
-        print("---------------------------------------------")
-
     # Summation
-    if option == 22:
+    if option == 21:
+        print(f"{bcolors.OKGREEN}----> [ Σ (i=a; n) f(i) ] SUMMATION? {bcolors.ENDC}")
+        print()
         exp = str(input("Enter the expression - e.g. (4*x ** 2) - 1 ---- "))
         i = int(input("Enter the initial index: "))
         n = int(input("Enter the final index: "))
@@ -441,7 +455,9 @@ while option != 0:
         print("---------------------------------------------")
 
     # Production Notation
-    if option == 23:
+    if option == 22:
+        print(f"{bcolors.OKGREEN}----> [ ∏ (i=a; n) f(i) ] PRODUCTION NOTATION? {bcolors.ENDC}")
+        print()
         exp = str(input("Enter the expression - e.g. (4*x ** 2) - 1 ---- "))
         i = int(input("Enter the initial index: "))
         n = int(input("Enter the final index: "))
@@ -453,7 +469,9 @@ while option != 0:
         print("---------------------------------------------")
 
     # Basic True Table
-    if option == 24:
+    if option == 23:
+        print(f"{bcolors.OKGREEN}----> (Basic) TRUE TABLE {bcolors.ENDC}")
+        print()
         p = str(input("Enter the (p) value (T for True / F for false): "))
         q = str(input("Enter the (q) value (T for True / F for false): "))
         print()
