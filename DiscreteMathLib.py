@@ -89,7 +89,7 @@ def p_biimplication_q(p, q):
   print()
 
   print(f"{bcolors.OKCYAN}p | q | p ↔ q{bcolors.ENDC}")
-  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}") 
   if p == q :
     return (f"{p} | {q} |   T")
   else:

@@ -179,12 +179,13 @@ while option != 0:
         print()
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
-
         setB = input("Enter a setA (e.g. 1,2,3,4): ")
         setB = set(map(int, setB.split(',')))
+        print()
 
-        print(f"{bcolors.OKCYAN}UNION: {bcolors.ENDC}", end=" ")
-        print(Union(setA, setB))
+        print(f"{bcolors.OKCYAN}{setA} ∪ {setB}{bcolors.ENDC}")
+        print(f"{bcolors.OKCYAN}A ∪ B: {bcolors.ENDC}", end=" ")
+        print(f"{bcolors.FAIL}{Union(setA, setB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -197,9 +198,11 @@ while option != 0:
 
         setB = input("Enter a setA (e.g. 1,2,3,4): ")
         setB = set(map(int, setB.split(',')))
+        print()
 
-        print(f"{bcolors.OKCYAN}INTERSECTION: {bcolors.ENDC}", end=" ")
-        print(Intersection(setA, setB))
+        print(f"{bcolors.OKCYAN}{setA} ∩ {setB}{bcolors.ENDC}")
+        print(f"{bcolors.OKCYAN}A ∩ B: {bcolors.ENDC}", end=" ")
+        print(f"{bcolors.FAIL}{Intersection(setA, setB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -212,9 +215,10 @@ while option != 0:
 
         setB = input("Enter a setA (e.g. 1,2,3,4): ")
         setB = set(map(int, setB.split(',')))
+        print()
 
         print(f"{bcolors.OKCYAN}{setA} ⊆ {setB}? {bcolors.ENDC}", end=" ")
-        print(Contained_or_IsSubset(setA, setB))
+        print(f"{bcolors.FAIL}{Contained_or_IsSubset(setA, setB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -226,9 +230,10 @@ while option != 0:
 
         setA = input("Enter a setA (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
+        print()
 
         print(f"{bcolors.OKCYAN}{x} ∈ {setA}? {bcolors.ENDC}", end=" ")
-        print(IsElement(x, setA))
+        print(f"{bcolors.FAIL}{IsElement(x, setA)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
         
