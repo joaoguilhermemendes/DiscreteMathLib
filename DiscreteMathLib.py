@@ -14,7 +14,12 @@ class bcolors:
 
 
 def not_p(p):
-  if p == "F" or "f":
+  print(f"{bcolors.OKCYAN}p | ¬p{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}------{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | F{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | T{bcolors.ENDC}")
+
+  if p == "F" or p == "f":
     return "T"
   else:
      return "F"
@@ -22,21 +27,48 @@ def not_p(p):
 ########################################################################
 
 def p_OR_q(p, q):
-  print("p | q | p v q")
+  print(f"{bcolors.OKCYAN}p | q | p v q{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | F |   F{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | F |   T{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | T |   T{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | T |   T{bcolors.ENDC}")
+  print()
+
+
+  print(f"{bcolors.OKCYAN}p | q | p v q{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
   return (f"{p} | {q} |   {p or q}")
 
 ########################################################################
 
 
 def p_AND_q(p, q):
-  print("p | q | p ^ q")
+  print(f"{bcolors.OKCYAN}p | q | p ^ q{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | F |   F{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | F |   F{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | T |   F{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | T |   T{bcolors.ENDC}")
+  print()
+
+  print(f"{bcolors.OKCYAN}p | q | p ^ q{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
   return (f"{p} | {q} |   {p and q}")
 
 ########################################################################
 
 
 def p_SO_q(p, q):
-  print("p | q | p -> q")
+  print(f"{bcolors.OKCYAN}p | q | p → q{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | F |   T{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | F |   F{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | T |   T{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | T |   T{bcolors.ENDC}")
+  print()
+
+  print(f"{bcolors.OKCYAN}p | q | p → q{bcolors.ENDC}")
   if (p == "T" or p == "t") and (q == "F" or q == 'f'):
     return (f"{p} | {q} |   F")
   else:
@@ -47,7 +79,15 @@ def p_SO_q(p, q):
 
 
 def p_biimplication_q(p, q):
-  print("p | q | p <-> q")
+  print(f"{bcolors.OKCYAN}p | q | p ↔ q{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}-------------{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | F |   T{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | F |   F{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}F | T |   F{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}T | T |   T{bcolors.ENDC}")
+  print()
+
+  print(f"{bcolors.OKCYAN}p | q | p ↔ q{bcolors.ENDC}")
   if p == q :
     return (f"{p} | {q} |   T")
   else:

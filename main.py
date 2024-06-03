@@ -94,73 +94,84 @@ print(f"{bcolors.WARNING} [ 23 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} (Basic
 print(f"{bcolors.WARNING} [ 24 ] {bcolors.ENDC}" + " " + f"{bcolors.BOLD} (Create) e.g. (p ^ q -> -r) {bcolors.ENDC}")
 print()
 print("---------------------------------------------")
-print()
 
 option=1
 while option != 0:
     option = int(input("Choose an option (0 to exit): "))
+    print("---------------------------------------------")
     print()
 
-    # ¬x / Not p
+    # ¬p / Not p
     if option == 1:
-        p = str(input("Enter the (p) value (T for True / F for false): "))
+        print(f"{bcolors.OKGREEN}----> [ ¬p | NOT p]{bcolors.ENDC}")
         print()
-        print(f"{bcolors.OKCYAN}{not_p(p)}{bcolors.ENDC}", end=" ")
+        p = str(input("Enter the (p) value (T/F): "))
+        print()
+        notp = not_p(p)
+        print()
+        print(f"{bcolors.OKCYAN}The inverse value for [{p.upper()}] is --> {bcolors.ENDC}", end=" ")
+        print(f"{bcolors.FAIL}[{notp}]{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
-        print() 
     
     # OR
     if option == 2:
-        p = str(input("Enter the (p) value (T for True / F for false): "))
-        q = str(input("Enter the (q) value (T for True / F for false): "))
+        print(f"{bcolors.OKGREEN}----> [ p v q | p OR q]{bcolors.ENDC}")
         print()
-        print(f"{bcolors.OKCYAN}{p_OR_q(p, q)}{bcolors.ENDC}", end=" ")
+        p = str(input("Enter the (p) value (T/F): "))
+        q = str(input("Enter the (p) value (T/F): "))
+        print()
+        print(f"{bcolors.FAIL}{p_OR_q(p, q)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
-        print()    
 
     # AND
     if option == 3:
-        p = str(input("Enter the (p) value (T for True / F for false): "))
-        q = str(input("Enter the (q) value (T for True / F for false): "))
+        print(f"{bcolors.OKGREEN}----> [ p ^ q | p AND q]{bcolors.ENDC}")
         print()
-        print(f"{bcolors.OKCYAN}{p_AND_q(p, q)}{bcolors.ENDC}", end=" ")
+        p = str(input("Enter the (p) value (T/F): "))
+        q = str(input("Enter the (p) value (T/F): "))
+        print()
+        print(f"{bcolors.FAIL}{p_AND_q(p, q)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
-        print()  
 
     # Implication
-    if option == 4 or option == "5":
-        p = str(input("Enter the (p) value (T for True / F forfalse): "))
-        q = str(input("Enter the (q) value (T for True / F for false): "))
+    if option == 4 or option == "4":
+        print(f"{bcolors.OKGREEN}----> [ p → q ] IMPLICATION{bcolors.ENDC}")
         print()
-        print(f"{bcolors.OKCYAN}{p_SO_q(p, q)}{bcolors.ENDC}", end=" ")
+        p = str(input("Enter the (p) value (T/F): "))
+        q = str(input("Enter the (p) value (T/F): "))
+        print()
+        print(f"{bcolors.FAIL}{p_SO_q(p, q)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
-        print() 
 
     # BI-Implication
     if option == 5 or option == "5":
-        p = str(input("Enter the (p) value (T for True / F forfalse): "))
-        q = str(input("Enter the (q) value (T for True / F for false): "))
+        print(f"{bcolors.OKGREEN}----> [ p ↔ q ] BI-IMPLICATION{bcolors.ENDC}")
         print()
-        print(f"{bcolors.OKCYAN}{p_biimplication_q(p, q)}{bcolors.ENDC}", end=" ")
+        p = str(input("Enter the (p) value (T/F): "))
+        q = str(input("Enter the (p) value (T/F): "))
+        print()
+        print(f"{bcolors.FAIL}{p_biimplication_q(p, q)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
-        print() 
-
 
     # Cardinality
-    if option == 6 or option == "09": 
+    if option == 6 or option == "06": 
+        print(f"{bcolors.OKGREEN}----> [|A|] CARDINALITY{bcolors.ENDC}")
+        print()
+        print(f"{bcolors.OKCYAN}The number of elements in the set. For example...{bcolors.ENDC}")
+        print(f"{bcolors.OKCYAN}A = {1,2,3,4,5}{bcolors.ENDC}")
+        print(f"{bcolors.OKCYAN}∣A∣ = 5{bcolors.ENDC}")
+        print()
         setA = input("Enter a set (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
-
-        print(f"{bcolors.OKCYAN}CARDINALITY: {bcolors.ENDC}", end=" ")
-        print(Cardinality(setA))
+        print()
+        print(f"{bcolors.FAIL}|A| = {Cardinality(setA)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
-        print()    
 
     # Union
     if option == 7:
@@ -174,7 +185,6 @@ while option != 0:
         print(Union(setA, setB))
         print()
         print("---------------------------------------------")
-        print()
 
     # Intersection
     if option == 8:
@@ -188,7 +198,6 @@ while option != 0:
         print(Intersection(setA, setB))
         print()
         print("---------------------------------------------")
-        print()    
 
     # Contained/IsSubset
     if option == 9:
@@ -202,7 +211,6 @@ while option != 0:
         print(Contained_or_IsSubset(setA, setB))
         print()
         print("---------------------------------------------")
-        print()
 
     # IsElement?
     if option == 10:
@@ -215,7 +223,6 @@ while option != 0:
         print(IsElement(x, setB))
         print()
         print("---------------------------------------------")
-        print()
         
     # Subtraction?
     if option == 11:
@@ -229,7 +236,6 @@ while option != 0:
         print(Subtraction(setA, setB))
         print()
         print("---------------------------------------------")
-        print()
 
     # Complement?
     if option == 12:
@@ -243,7 +249,6 @@ while option != 0:
         print(Complement(setA, setB))
         print()
         print("---------------------------------------------")
-        print()
 
     # CrtProd
     if option == 13:
@@ -257,7 +262,6 @@ while option != 0:
         print(CrtProd(setA, setB))
         print()
         print("---------------------------------------------")
-        print()
 
     # Partition
     if option == 14:
@@ -269,7 +273,6 @@ while option != 0:
         print_partitions(partitions)
         print()
         print("---------------------------------------------")
-        print()
 
     # Simetric Difference
     if option == 15:
@@ -283,7 +286,6 @@ while option != 0:
         print(SimetricDifference(setA, setB))
         print()
         print("---------------------------------------------")
-        print()
     
     # Sum of Matrix
     if option == 16:
@@ -314,7 +316,6 @@ while option != 0:
         print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Sum_of_Matrix(matA, matB)}")
         print()
         print("---------------------------------------------")
-        print()
 
 
     # Sub of Matrix
@@ -346,7 +347,6 @@ while option != 0:
         print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Sub_of_Matrix(matA, matB)}")
         print()
         print("---------------------------------------------")
-        print()
 
 
     # Mult of Matrix
@@ -378,8 +378,6 @@ while option != 0:
         print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Mult_of_Matrix(matA, matB)}")
         print()
         print("---------------------------------------------")
-        print()
-
 
     # Transpose Matrix
     if option == 19:
@@ -396,8 +394,6 @@ while option != 0:
         print(f"{bcolors.OKCYAN}{Transpose(mat, size)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
-        print()
-
 
     # Matrix is symmetric
     if option == 20:
@@ -414,7 +410,6 @@ while option != 0:
         print(f"{bcolors.OKCYAN}{mat}{bcolors.ENDC} is symmetric? = {isSymmetric(mat, size)}")
         print()
         print("---------------------------------------------")
-        print()
 
     # Transpose Matrix
     if option == 21:
@@ -431,7 +426,6 @@ while option != 0:
         print(f"{bcolors.OKCYAN}{Transpose(mat, size)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
-        print()
 
     # Summation
     if option == 22:
@@ -445,7 +439,6 @@ while option != 0:
         print(Summation(exp, i, n))
         print()
         print("---------------------------------------------")
-        print()
 
     # Production Notation
     if option == 23:
@@ -458,7 +451,6 @@ while option != 0:
         print(ProductionNotation(exp, i, n))
         print()
         print("---------------------------------------------")
-        print()
 
     # Basic True Table
     if option == 24:
@@ -468,7 +460,6 @@ while option != 0:
         print(f"{bcolors.OKCYAN}{BasicTrueTable(p,q)}{bcolors.ENDC}", end=" ")
         print()
         print("---------------------------------------------")
-        print()    
 
 
 
