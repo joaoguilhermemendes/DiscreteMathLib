@@ -25,7 +25,7 @@ from DiscreteMathLib import Summation
 from DiscreteMathLib import ProductionNotation
 from DiscreteMathLib import BasicTrueTable
 
-# Colors
+## Colors
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
