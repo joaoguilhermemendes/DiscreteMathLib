@@ -246,9 +246,9 @@ while option != 0:
 
         setB = input("Enter a setA (e.g. 1,2,3,4): ")
         setB = set(map(int, setB.split(',')))
-
+        print()
         print(f"{bcolors.OKCYAN}{setA} - {setB} = {bcolors.ENDC}", end=" ")
-        print(Subtraction(setA, setB))
+        print(f"{bcolors.FAIL}{Subtraction(setA, setB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -261,9 +261,9 @@ while option != 0:
 
         setB = input("Enter a set (e.g. 1,2,3,4): ")
         setB = set(map(int, setB.split(',')))
-
+        print()
         print(f"{bcolors.OKCYAN}{setA}' ou ({setA} - {setB}) = {bcolors.ENDC}", end=" ")
-        print(Complement(setA, setB))
+        print(f"{bcolors.FAIL}{Complement(setA, setB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -276,9 +276,9 @@ while option != 0:
 
         setB = input("Enter a set (e.g. 1,2,3,4): ")
         setB = set(map(int, setB.split(',')))
-
+        print()
         print(f"{bcolors.OKCYAN}{setA} x {setB} = {bcolors.ENDC}", end=" ")
-        print(CrtProd(setA, setB))
+        print(f"{bcolors.FAIL}{CrtProd(setA, setB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -288,8 +288,9 @@ while option != 0:
         print()
         setA = input("Enter a set Universal (e.g. 1,2,3,4): ")
         setA = set(map(int, setA.split(',')))
-
-        print(f"P({setA}) = ", end=" ")
+        print()
+        print(f"{bcolors.OKCYAN}P({setA}) = {bcolors.ENDC}")
+        print()
         partitions = Partition(list(setA))
         print_partitions(partitions)
         print()
@@ -304,9 +305,9 @@ while option != 0:
 
         setB = input("Enter a setB (e.g. 1,2,3,4): ")
         setB = set(map(int, setB.split(',')))
-
+        print()
         print(f"{bcolors.OKCYAN}{setA} △ {setB} = {bcolors.ENDC}", end=" ")
-        print(SimetricDifference(setA, setB))
+        print(f"{bcolors.FAIL}{SimetricDifference(setA, setB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
     
@@ -338,7 +339,7 @@ while option != 0:
         
         print()
 
-        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Sum_of_Matrix(matA, matB)}")
+        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {bcolors.FAIL}{Sum_of_Matrix(matA, matB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -371,7 +372,7 @@ while option != 0:
 
         print()
 
-        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Sub_of_Matrix(matA, matB)}")
+        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {bcolors.FAIL}{Sub_of_Matrix(matA, matB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -404,7 +405,7 @@ while option != 0:
 
         print()
 
-        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {Mult_of_Matrix(matA, matB)}")
+        print(f"{bcolors.OKCYAN}{matA} + {matB}{bcolors.ENDC} = {bcolors.FAIL}{Mult_of_Matrix(matA, matB)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -422,7 +423,8 @@ while option != 0:
             mat.append(row)
             cont += 1
 
-        print(f"{bcolors.OKCYAN}{Transpose(mat, size)}{bcolors.ENDC}")
+        print()
+        Transpose(mat, size)
         print()
         print("---------------------------------------------")
 
@@ -440,7 +442,8 @@ while option != 0:
             mat.append(row)
             cont += 1
 
-        print(f"{bcolors.OKCYAN}{mat}{bcolors.ENDC} is symmetric? = {isSymmetric(mat, size)}")
+        print()
+        print(f"{bcolors.OKCYAN}{mat} is symmetric?{bcolors.ENDC} {bcolors.FAIL}= {isSymmetric(mat, size)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -451,11 +454,11 @@ while option != 0:
         exp = str(input("Enter the expression - e.g. (4*x ** 2) - 1 ---- "))
         i = int(input("Enter the initial index: "))
         n = int(input("Enter the final index: "))
-
+        print()
         print(f"{bcolors.OKCYAN}Σ (i={i} to {n}) = {exp}{bcolors.ENDC}")
         print()
-        print("Σ = ", end="")
-        print(Summation(exp, i, n))
+        print(f"{bcolors.FAIL}Σ = {bcolors.ENDC}", end="")
+        print(f"{bcolors.FAIL}{Summation(exp, i, n)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -466,10 +469,10 @@ while option != 0:
         exp = str(input("Enter the expression - e.g. (4*x ** 2) - 1 ---- "))
         i = int(input("Enter the initial index: "))
         n = int(input("Enter the final index: "))
-
-        print(f"{bcolors.OKCYAN}Production Notation: {bcolors.ENDC}")
         print()
-        print(ProductionNotation(exp, i, n))
+        print(f"{bcolors.OKCYAN}∏ (i={i} to {n}) = {exp}{bcolors.ENDC}")
+        print()
+        print(f"{bcolors.FAIL}∏ = {ProductionNotation(exp, i, n)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 
@@ -480,7 +483,7 @@ while option != 0:
         p = str(input("Enter the (p) value (T for True / F for false): "))
         q = str(input("Enter the (q) value (T for True / F for false): "))
         print()
-        print(f"{bcolors.OKCYAN}{BasicTrueTable(p,q)}{bcolors.ENDC}", end=" ")
+        print(f"{bcolors.FAIL}{BasicTrueTable(p,q)}{bcolors.ENDC}")
         print()
         print("---------------------------------------------")
 

@@ -235,7 +235,7 @@ def Partition(setPartition):
 # Function to print partitions
 def print_partitions(partitions):
     for partition in partitions:
-        print(partition)
+        print(f"          {bcolors.FAIL}{partition}{bcolors.ENDC}")
 
 '''setPartition = [1, 2, 3, 4]
 print(setPartition)
@@ -352,14 +352,12 @@ def Mult_of_Matrix(matA, matB):
 #########################################################################
 
 def Transpose(mat, N):
-  label = "TRANSPOSE MATRIX"
   tr = [ [0 for j in range(len(mat[0])) ] for i in range(len(mat)) ]  
   for i in range(N):
     for j in range(N):
       tr[i][j] = mat[j][i]
-      print(f"{bcolors.OKCYAN}{tr[i][j]}{bcolors.ENDC}",end='  ')
+      print(f"{bcolors.FAIL}{tr[i][j]}{bcolors.ENDC}",end='  ')
     print()
-  return label
 
 '''
 mat = [ [ 1, 2, 3 ], 
@@ -400,8 +398,8 @@ def Summation(exp,i,n):
         res = eval(exp)
         parts.append(res)
         j=j+1
-    print(parts)
-    print("Σ = ", end="")
+    print(f"{bcolors.FAIL}{parts}{bcolors.ENDC}")
+    print(f"{bcolors.FAIL}Σ = {bcolors.ENDC}", end="")
     return sum(parts)
 
 '''
@@ -419,12 +417,11 @@ def ProductionNotation(exp, i, n):
     parts = []
     while j <= n:
         x = j
-        # Aqui, vamos substituir o valor de x na expressão antes de avaliá-la
         res = eval(exp)
         parts.append(res)
         j = j + 1
 
-    # Depois de obter os resultados das expressões, calculamos o produto deles
+    print(f"{bcolors.FAIL}∏ = {parts}{bcolors.ENDC}")
     prod = parts[0]
     for aux in range(0, len(parts) - 1):
         if (aux + 1) <= len(parts) - 1:
@@ -434,10 +431,11 @@ def ProductionNotation(exp, i, n):
 ##########################################################################
 
 def BasicTrueTable(p,q):
-  print("p | q | ¬p | ¬q | pvq |p∧q |p->q |p<->q|")
+  print(f"{bcolors.OKCYAN}p | q | ¬p | ¬q | pvq |p∧q |p->q |p<->q|{bcolors.ENDC}")
+  print(f"{bcolors.OKCYAN}----------------------------------------{bcolors.ENDC}")
   if (p == "T" or p == "t") and (q == "F" or q == 'f'):
     impl = "F"
   else:
     impl = "T"
      
-  return (f"{p} | {q} |  {not p} |  {not q} |  {p or q}  |  {p and q} |  {impl}  |  {p == q}").replace("True", "T").replace("False", "F")
+  return (f"{p} | {q} |  {not p} |  {not q} |  {p or q}  |  {p and q} |  {impl}  |  {p == q}").replace("True", "T").replace("False", "F").replace("t", "T").replace("f", "F")

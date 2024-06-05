@@ -36,5 +36,6 @@ Final index: 5 <br>
  - [ ] Create a generalized function for the user creates a logic expression (e.g. https://web.stanford.edu/class/cs103/tools/truth-table-tool/)
  - [x] Re-Order index (Remove 01 | Maybe 07, 08 (need to think about))
  - [x] Create a Label for the prints (e.g. [ UNION ]) / some different color
- - [ ] Step-by-Step Demonstrations
+ - [x] Step-by-Step Demonstrations
+ - [ ] Quick description in call functions
  - [x] Improve Summation equation possibilities
