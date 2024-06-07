@@ -104,7 +104,7 @@ def Cardinality(setA):
 
 def Union(setA, setB):
   setAB =  setA | setB
-  
+    
   # Will put the set in ascending order
   setAB = sorted(setAB)
   return setAB
@@ -139,6 +139,7 @@ print(setAB)
 
 # Subset(or equal)/check_if_is_contained( or equal ) of two sets
 def Contained_or_IsSubset(setA, setB):
+  print(f"{bcolors.OKCYAN}A subset relation between two sets exists when all elements of one set are also elements of the other set, defining a contained or subset relationship.{bcolors.ENDC}")
   setAB =  setA.issubset(setB)
   return setAB
 
