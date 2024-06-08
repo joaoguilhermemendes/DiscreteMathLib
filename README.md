@@ -5,7 +5,7 @@ This repository contains a collection of Python functions designed to perform va
  - Union: Computes the union of two sets.
  - Intersection: Computes the intersection of two sets.
  - Symmetric Difference: Calculates the symmetric difference between two sets.
- - More...
+ - Some more...
 
 ![alt text](image.png)
 
