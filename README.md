@@ -19,6 +19,7 @@ This repository contains a collection of Python functions designed to perform va
 ## To Do:
  - [x] Code the (Basic) TRUE TABLE function
  - [ ] Create a generalized function for the user creates a logic expression (e.g. https://web.stanford.edu/class/cs103/tools/truth-table-tool/)
+-  [ ] Create a graphic interface using customtkinter
  - [x] Re-Order index (Remove 01 | Maybe 07, 08 (need to think about))
  - [x] Create a Label for the prints (e.g. [ UNION ]) / some different color
  - [x] Step-by-Step Demonstrations
