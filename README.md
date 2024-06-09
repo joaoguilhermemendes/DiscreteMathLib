@@ -1,33 +1,18 @@
 # Discrete Math Functions Collection
 This repository contains a collection of Python functions designed to perform various operations commonly encountered in discrete mathematics courses. Whether you're studying sets, relations, functions, combinatorics, or graph theory, this collection aims to provide helpful tools to assist you in your studies.
 
-## Functions Included:
- - Union: Computes the union of two sets.
- - Intersection: Computes the intersection of two sets.
- - Symmetric Difference: Calculates the symmetric difference between two sets.
- - Some more...
+<br>
 
-![alt text](image.png)
+## Functions Included:
+![alt text](image-1.png)
+
+<br>
 
 ## Samples Demonstration
-#### INPUT
-```python
-[ SUMMATION ]
-
-Expression: (4*x ** 2)/2*x <br>
-Initial index: 0 <br>
-Final index: 5 <br>
-```
-
-#### OUTPUT
-```python
-[ SUMMATION ]
-
-Σ (i=0 to 2) = (4*x ** 2)/2*x
-
-Σ = [0.0, 2.0, 16.0]
-Σ = 18.0
-```
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-6.png)
 
 <br>
 

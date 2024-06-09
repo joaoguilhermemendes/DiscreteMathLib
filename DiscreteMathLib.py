@@ -440,3 +440,5 @@ def BasicTrueTable(p,q):
     impl = "T"
      
   return (f"{p} | {q} |  {not p} |  {not q} |  {p or q}  |  {p and q} |  {impl}  |  {p == q}").replace("True", "T").replace("False", "F").replace("t", "T").replace("f", "F")
+
+##########################################################################

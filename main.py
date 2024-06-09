@@ -9,7 +9,7 @@ from DiscreteMathLib import CrtProd
 from DiscreteMathLib import Partition
 from DiscreteMathLib import print_partitions
 from DiscreteMathLib import SimetricDifference
-from DiscreteMathLib import p
+from DiscreteMathLib import p21
 from DiscreteMathLib import q
 from DiscreteMathLib import not_p
 from DiscreteMathLib import p_OR_q
@@ -212,7 +212,7 @@ while option != 0:
 
     # Contained/IsSubset
     if option == 9:
-        print(f"{bcolors.OKGREEN}----> [ A ⊆ B ] CONTAINED/IS SUBSET{bcolors.ENDC}")
+        print(f"{bcolors.OKGREEN}----> [ A ⊆ B ] CONTAINED/IS SUBSET?{bcolors.ENDC}")
         print()
         print(f"{bcolors.OKCYAN}A subset relation between two sets exists when all elements of one set are also elements of the other set, defining a contained or subset relationship.{bcolors.ENDC}")
         print()
@@ -477,7 +477,7 @@ while option != 0:
 
     # Summation
     if option == 21:
-        print(f"{bcolors.OKGREEN}----> [ Σ (i=a; n) f(i) ] SUMMATION? {bcolors.ENDC}")
+        print(f"{bcolors.OKGREEN}----> [ Σ (i=a; n) f(i) ] SUMMATION {bcolors.ENDC}")
         print()
         print(f"{bcolors.OKCYAN}Summation involves adding together a sequence of numbers or terms to calculate their total. It's denoted by the symbol Σ (sigma), with an index or range indicating the terms to be summed. This operation is fundamental in mathematics for finding totals, averages, and areas under curves.{bcolors.ENDC}")
         print()
@@ -494,7 +494,7 @@ while option != 0:
 
     # Production Notation
     if option == 22:
-        print(f"{bcolors.OKGREEN}----> [ ∏ (i=a; n) f(i) ] PRODUCTION NOTATION? {bcolors.ENDC}")
+        print(f"{bcolors.OKGREEN}----> [ ∏ (i=a; n) f(i) ] PRODUCTION NOTATION {bcolors.ENDC}")
         print()
         print(f"{bcolors.OKCYAN}Product notation represents the multiplication of a sequence of numbers or terms. It employs the symbol Π (pi) and an index or range to specify the terms to be multiplied. This notation is fundamental in mathematics for calculating products, including factorial expressions and infinite series.{bcolors.ENDC}")
         print()
