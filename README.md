@@ -10,7 +10,7 @@ This repository contains a collection of Python functions designed to perform va
 
 ## Samples Demonstration
 ![alt text](./samples-img/image-2.png)
-![alt text](./samples-img/image-3.pngc)
+![alt text](./samples-img/image-3.png)
 ![alt text](./samples-img/image-4.png)
 ![alt text](./samples-img/image-6.png)
 
